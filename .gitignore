@@ -1,0 +1,69 @@
+# Flutter/Dart/Pub related
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+build/
+generated_plugin_registrant.dart
+
+# Android related
+**/android/app/debug
+**/android/app/profile
+**/android/app/release
+android/.gradle/
+android/app/build/
+android/gradle/
+android/local.properties
+android/.idea/
+android/.settings/
+
+# iOS related
+ios/Pods/
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/Flutter/Generated.xcconfig
+ios/Flutter/ephemeral/
+ios/Runner.xcworkspace/
+ios/.symlinks/
+ios/Flutter/App.framework
+ios/Flutter/engine/
+ios/build/
+
+# Xcode related
+*.xcuserstate
+*.xcworkspace
+*.xcuserdata
+
+# VSCode
+.vscode/
+
+# IntelliJ related
+*.iml
+.idea/
+
+# Other backup files
+*.swp
+*.tmp
+*.temp
+*.bak
+*.orig
+*.log
+
+# MacOS related
+.DS_Store
+
+# Windows related
+Thumbs.db
+
+# Web
+web/.dart_tool/
+web/.build/
+
+# Linux
+linux/.dart_tool/
+linux/.build/
+
+# Fuchsia
+fuchsia/.dart_tool/
+fuchsia/.build/
