@@ -31,7 +31,23 @@ class HomeViewModel extends BaseViewModel {
 
   Future<void> loadStocks() async {
     setBusy(true);
+
+    // Step 1: Save current favorites
+    final favoriteIds = _allStocks
+        .where((s) => s.isFavorite)
+        .map((s) => s.id)
+        .toSet();
+
+    // Step 2: Load new stocks
     _allStocks = await _stockService.loadStocks();
+
+    // Step 3: Restore favorites
+    for (var stock in _allStocks) {
+      if (favoriteIds.contains(stock.id)) {
+        stock.isFavorite = true;
+      }
+    }
+
     setBusy(false);
     notifyListeners();
   }
