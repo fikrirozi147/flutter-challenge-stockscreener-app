@@ -1,9 +1,27 @@
-import 'package:stacked/stacked.dart';
-import 'package:stacked/stacked_annotations.dart'; // Add this import for StackedLocator
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+// **************************************************************************
+// StackedLocatorGenerator
+// **************************************************************************
+
+// ignore_for_file: public_member_api_docs, implementation_imports, depend_on_referenced_packages
+
+import 'package:stacked_shared/stacked_shared.dart';
+
+import '../services/stock_service.dart';
+import '../ui/views/home_viewmodel.dart';
 
 final locator = StackedLocator.instance;
 
-void setupLocator() {
-  // Register any services here, if needed
-  // locator.registerLazySingleton(() => StockService());
+Future<void> setupLocator({
+  String? environment,
+  EnvironmentFilter? environmentFilter,
+}) async {
+// Register environments
+  locator.registerEnvironment(
+      environment: environment, environmentFilter: environmentFilter);
+
+// Register dependencies
+  locator.registerLazySingleton(() => StockService());
+  locator.registerLazySingleton(() => HomeViewModel());
 }

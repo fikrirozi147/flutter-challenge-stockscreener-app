@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Stock Screener',
       theme: ThemeData(
         useMaterial3: true,
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.black),
         scaffoldBackgroundColor: Colors.grey[50],
         appBarTheme: const AppBarTheme(
           backgroundColor: Colors.white,

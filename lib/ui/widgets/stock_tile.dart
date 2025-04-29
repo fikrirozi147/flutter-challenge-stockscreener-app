@@ -19,11 +19,12 @@ class StockTile extends StatelessWidget {
     return Card(
       // Card gives a nice Material design look with elevation and rounded corners
       elevation: 2,
-      margin: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+      margin: const EdgeInsets.symmetric(horizontal: 14, vertical: 5),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
       child: ListTile(
         // ListTile is the base structure inside each Card
-        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+        contentPadding: const EdgeInsets.symmetric(horizontal: 14, vertical: 5),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
         tileColor: stock.stockPrice.priceChange >= 0
             ? Colors.green[50] // Light green background if stock went up
             : Colors.red[50], // Light red background if stock went down
@@ -33,11 +34,11 @@ class StockTile extends StatelessWidget {
         ),
         title: Text(
           stock.name, // Company name
-          style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+          style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
         ),
         subtitle: Text(
           stock.symbol, // Company stock symbol
-          style: const TextStyle(fontSize: 14),
+          style: const TextStyle(fontSize: 12),
         ),
         trailing: Row(
           mainAxisSize: MainAxisSize.min,
@@ -80,7 +81,7 @@ class StockTile extends StatelessWidget {
                       ? Icons.star
                       : Icons.star_border, // Filled or empty star
                   color: stock.isFavorite
-                      ? Colors.amber
+                      ? Colors.black
                       : Colors.grey, // Yellow if favorite
                 ),
                 onPressed:
