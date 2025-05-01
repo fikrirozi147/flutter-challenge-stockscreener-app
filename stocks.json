@@ -1,0 +1,424 @@
+{
+    "stocks": [
+        {
+            "id": 13,
+            "symbol": "AAPL",
+            "name": "Apple Inc",
+            "logo_url": "https://storage.googleapis.com/iexcloud-hl37opg/api/logos/AAPL.png",
+            "stock_price": {
+                "current_price": {
+                    "amount": "169.98",
+                    "currency": "USD"
+                },
+                "price_change": -1.5,
+                "percentage_change": -0.87
+            }
+        },
+        {
+            "id": 21,
+            "symbol": "ABCL",
+            "name": "AbCellera Biologics Inc",
+            "logo_url": "https://storage.googleapis.com/iexcloud-hl37opg/api/logos/ABCL.png",
+            "stock_price": {
+                "current_price": {
+                    "amount": "4.44",
+                    "currency": "USD"
+                },
+                "price_change": -0.05,
+                "percentage_change": -1.11
+            }
+        },
+        {
+            "id": 271,
+            "symbol": "AMD",
+            "name": "Advanced Micro Devices Inc.",
+            "logo_url": "https://storage.googleapis.com/iexcloud-hl37opg/api/logos/AMD.png",
+            "stock_price": {
+                "current_price": {
+                    "amount": "183.32",
+                    "currency": "USD"
+                },
+                "price_change": 3.73,
+                "percentage_change": 2.08
+            }
+        },
+        {
+            "id": 308,
+            "symbol": "AMZN",
+            "name": "Amazon.com Inc.",
+            "logo_url": "https://storage.googleapis.com/iexcloud-hl37opg/api/logos/AMZN.png",
+            "stock_price": {
+                "current_price": {
+                    "amount": "180.93",
+                    "currency": "USD"
+                },
+                "price_change": 0.55,
+                "percentage_change": 0.3
+            }
+        },
+        {
+            "id": 456,
+            "symbol": "ATEN",
+            "name": "A10 Networks Inc",
+            "logo_url": "https://storage.googleapis.com/iexcloud-hl37opg/api/logos/ATEN.png",
+            "stock_price": {
+                "current_price": {
+                    "amount": "13.65",
+                    "currency": "USD"
+                },
+                "price_change": -0.04,
+                "percentage_change": -0.29
+            }
+        },
+        {
+            "id": 1195,
+            "symbol": "COIN",
+            "name": "Coinbase Global Inc - Class A",
+            "logo_url": "https://storage.googleapis.com/iexcloud-hl37opg/api/logos/COIN.png",
+            "stock_price": {
+                "current_price": {
+                    "amount": "252.77",
+                    "currency": "USD"
+                },
+                "price_change": -3.93,
+                "percentage_change": -1.53
+            }
+        },
+        {
+            "id": 1216,
+            "symbol": "COST",
+            "name": "Costco Wholesale Corp",
+            "logo_url": "https://storage.googleapis.com/iexcloud-hl37opg/api/logos/COST.png",
+            "stock_price": {
+                "current_price": {
+                    "amount": "683.14",
+                    "currency": "USD"
+                },
+                "price_change": -0.1,
+                "percentage_change": -0.01
+            }
+        },
+        {
+            "id": 1265,
+            "symbol": "CRM",
+            "name": "Salesforce.Com Inc",
+            "logo_url": "https://storage.googleapis.com/iexcloud-hl37opg/api/logos/CRM.png",
+            "stock_price": {
+                "current_price": {
+                    "amount": "302.27",
+                    "currency": "USD"
+                },
+                "price_change": 1.09,
+                "percentage_change": 0.36
+            }
+        },
+        {
+            "id": 1481,
+            "symbol": "DIS",
+            "name": "Walt Disney Co (The)",
+            "logo_url": "https://storage.googleapis.com/iexcloud-hl37opg/api/logos/DIS.png",
+            "stock_price": {
+                "current_price": {
+                    "amount": "121.53",
+                    "currency": "USD"
+                },
+                "price_change": 0.55,
+                "percentage_change": 0.45
+            }
+        },
+        {
+            "id": 1525,
+            "symbol": "DOCU",
+            "name": "DocuSign Inc",
+            "logo_url": "https://storage.googleapis.com/iexcloud-hl37opg/api/logos/DOCU.png",
+            "stock_price": {
+                "current_price": {
+                    "amount": "58.27",
+                    "currency": "USD"
+                },
+                "price_change": -1,
+                "percentage_change": -1.69
+            }
+        },
+        {
+            "id": 1849,
+            "symbol": "F",
+            "name": "Ford Motor Co.",
+            "logo_url": "https://storage.googleapis.com/iexcloud-hl37opg/api/logos/F.png",
+            "stock_price": {
+                "current_price": {
+                    "amount": "13.29",
+                    "currency": "USD"
+                },
+                "price_change": 0.01,
+                "percentage_change": 0.08
+            }
+        },
+        {
+            "id": 1863,
+            "symbol": "META",
+            "name": "Meta Platforms Inc - Class A",
+            "logo_url": "https://storage.googleapis.com/iexcloud-hl37opg/api/logos/FB.png",
+            "stock_price": {
+                "current_price": {
+                    "amount": "491.67",
+                    "currency": "USD"
+                },
+                "price_change": 6.09,
+                "percentage_change": 1.25
+            }
+        },
+        {
+            "id": 2279,
+            "symbol": "GOOG",
+            "name": "Alphabet Inc - Class C",
+            "logo_url": "https://storage.googleapis.com/iexcloud-hl37opg/api/logos/GOOG.png",
+            "stock_price": {
+                "current_price": {
+                    "amount": "156.50",
+                    "currency": "USD"
+                },
+                "price_change": 4.56,
+                "percentage_change": 3
+            }
+        },
+        {
+            "id": 2407,
+            "symbol": "HD",
+            "name": "Home Depot, Inc.",
+            "logo_url": "https://storage.googleapis.com/iexcloud-hl37opg/api/logos/HD.png",
+            "stock_price": {
+                "current_price": {
+                    "amount": "368.00",
+                    "currency": "USD"
+                },
+                "price_change": -15.6,
+                "percentage_change": -4.07
+            }
+        },
+        {
+            "id": 2710,
+            "symbol": "INTU",
+            "name": "Intuit Inc",
+            "logo_url": "https://storage.googleapis.com/iexcloud-hl37opg/api/logos/INTU.png",
+            "stock_price": {
+                "current_price": {
+                    "amount": "639.44",
+                    "currency": "USD"
+                },
+                "price_change": -10.56,
+                "percentage_change": -1.62
+            }
+        },
+        {
+            "id": 2939,
+            "symbol": "KO",
+            "name": "Coca-Cola Co",
+            "logo_url": "https://storage.googleapis.com/iexcloud-hl37opg/api/logos/KO.png",
+            "stock_price": {
+                "current_price": {
+                    "amount": "60.68",
+                    "currency": "USD"
+                },
+                "price_change": -0.5,
+                "percentage_change": -0.82
+            }
+        },
+        {
+            "id": 3246,
+            "symbol": "MCD",
+            "name": "McDonald`s Corp",
+            "logo_url": "https://storage.googleapis.com/iexcloud-hl37opg/api/logos/MCD.png",
+            "stock_price": {
+                "current_price": {
+                    "amount": "280.09",
+                    "currency": "USD"
+                },
+                "price_change": -1.86,
+                "percentage_change": -0.66
+            }
+        },
+        {
+            "id": 3454,
+            "symbol": "MSFT",
+            "name": "Microsoft Corporation",
+            "logo_url": "https://storage.googleapis.com/iexcloud-hl37opg/api/logos/MSFT.png",
+            "stock_price": {
+                "current_price": {
+                    "amount": "424.57",
+                    "currency": "USD"
+                },
+                "price_change": 3.85,
+                "percentage_change": 0.92
+            }
+        },
+        {
+            "id": 3593,
+            "symbol": "NET",
+            "name": "Cloudflare Inc - Class A",
+            "logo_url": "https://storage.googleapis.com/iexcloud-hl37opg/api/logos/NET.png",
+            "stock_price": {
+                "current_price": {
+                    "amount": "95.66",
+                    "currency": "USD"
+                },
+                "price_change": -0.89,
+                "percentage_change": -0.92
+            }
+        },
+        {
+            "id": 3611,
+            "symbol": "NFLX",
+            "name": "NetFlix Inc",
+            "logo_url": "https://storage.googleapis.com/iexcloud-hl37opg/api/logos/NFLX.png",
+            "stock_price": {
+                "current_price": {
+                    "amount": "614.08",
+                    "currency": "USD"
+                },
+                "price_change": 6.75,
+                "percentage_change": 1.11
+            }
+        },
+        {
+            "id": 3639,
+            "symbol": "NKE",
+            "name": "Nike, Inc. - Class B",
+            "logo_url": "https://storage.googleapis.com/iexcloud-hl37opg/api/logos/NKE.png",
+            "stock_price": {
+                "current_price": {
+                    "amount": "92.56",
+                    "currency": "USD"
+                },
+                "price_change": -1.42,
+                "percentage_change": -1.51
+            }
+        },
+        {
+            "id": 3851,
+            "symbol": "OKTA",
+            "name": "Okta Inc - Class A",
+            "logo_url": "https://storage.googleapis.com/iexcloud-hl37opg/api/logos/OKTA.png",
+            "stock_price": {
+                "current_price": {
+                    "amount": "103.50",
+                    "currency": "USD"
+                },
+                "price_change": -1.42,
+                "percentage_change": -1.35
+            }
+        },
+        {
+            "id": 3903,
+            "symbol": "ORCL",
+            "name": "Oracle Corp.",
+            "logo_url": "https://storage.googleapis.com/iexcloud-hl37opg/api/logos/ORCL.png",
+            "stock_price": {
+                "current_price": {
+                    "amount": "125.47",
+                    "currency": "USD"
+                },
+                "price_change": -0.14,
+                "percentage_change": -0.11
+            }
+        },
+        {
+            "id": 4101,
+            "symbol": "PINS",
+            "name": "Pinterest Inc - Class A",
+            "logo_url": "https://storage.googleapis.com/iexcloud-hl37opg/api/logos/PINS.png",
+            "stock_price": {
+                "current_price": {
+                    "amount": "35.31",
+                    "currency": "USD"
+                },
+                "price_change": 0.43,
+                "percentage_change": 1.23
+            }
+        },
+        {
+            "id": 4287,
+            "symbol": "PYPL",
+            "name": "PayPal Holdings Inc",
+            "logo_url": "https://storage.googleapis.com/iexcloud-hl37opg/api/logos/PYPL.png",
+            "stock_price": {
+                "current_price": {
+                    "amount": "65.16",
+                    "currency": "USD"
+                },
+                "price_change": -1.41,
+                "percentage_change": -2.12
+            }
+        },
+        {
+            "id": 4349,
+            "symbol": "RBLX",
+            "name": "Roblox Corporation - Class A",
+            "logo_url": "https://storage.googleapis.com/iexcloud-hl37opg/api/logos/RBLX.png",
+            "stock_price": {
+                "current_price": {
+                    "amount": "37.86",
+                    "currency": "USD"
+                },
+                "price_change": -0.02,
+                "percentage_change": -0.05
+            }
+        },
+        {
+            "id": 4581,
+            "symbol": "SBUX",
+            "name": "Starbucks Corp.",
+            "logo_url": "https://storage.googleapis.com/iexcloud-hl37opg/api/logos/SBUX.png",
+            "stock_price": {
+                "current_price": {
+                    "amount": "91.52",
+                    "currency": "USD"
+                },
+                "price_change": 0.13,
+                "percentage_change": 0.14
+            }
+        },
+        {
+            "id": 4670,
+            "symbol": "SHOP",
+            "name": "Shopify Inc - Class A",
+            "logo_url": "https://storage.googleapis.com/iexcloud-hl37opg/api/logos/SHOP.png",
+            "stock_price": {
+                "current_price": {
+                    "amount": "78.21",
+                    "currency": "USD"
+                },
+                "price_change": -0.41,
+                "percentage_change": -0.52
+            }
+        },
+        {
+            "id": 4752,
+            "symbol": "SNAP",
+            "name": "Snap Inc - Class A",
+            "logo_url": "https://storage.googleapis.com/iexcloud-hl37opg/api/logos/SNAP.png",
+            "stock_price": {
+                "current_price": {
+                    "amount": "11.24",
+                    "currency": "USD"
+                },
+                "price_change": -0.21,
+                "percentage_change": -1.83
+            }
+        },
+        {
+            "id": 4801,
+            "symbol": "SPLK",
+            "name": "Splunk Inc",
+            "logo_url": "https://storage.googleapis.com/iexcloud-hl37opg/api/logos/SPLK.png",
+            "stock_price": {
+                "current_price": {
+                    "amount": "156.92",
+                    "currency": "USD"
+                },
+                "price_change": 0.41,
+                "percentage_change": 0.26
+            }
+        }
+    ]
+}
