@@ -9,12 +9,11 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   await Hive.initFlutter();
-  await Hive.openBox<List>('favorites'); // ✅ must succeed before app runs
+  await Hive.openBox<List>('favorites'); // must succeed before app runs
 
   setupLocator();
   runApp(const MyApp());
 }
-
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

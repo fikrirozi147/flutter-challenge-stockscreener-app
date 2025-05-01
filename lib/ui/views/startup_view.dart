@@ -11,7 +11,7 @@ class StartupView extends StatefulWidget {
 
 class _StartupViewState extends State<StartupView> {
   late VideoPlayerController _controller;
-  bool _hasNavigated = false; // ✅ Prevents multiple calls
+  bool _hasNavigated = false; // Prevents multiple calls
 
   @override
   void initState() {

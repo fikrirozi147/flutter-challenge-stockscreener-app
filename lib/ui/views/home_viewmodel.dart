@@ -89,7 +89,7 @@ class HomeViewModel extends BaseViewModel {
   void _saveFavoritesToHive() {
     final favoriteIds = _allStocks
         .where((s) => s.isFavorite)
-        .map((s) => s.id.toString()) // ✅ store as strings
+        .map((s) => s.id.toString()) // store as strings
         .toList();
 
     _favoritesBox.put('stock_ids', favoriteIds);
@@ -106,4 +106,9 @@ class HomeViewModel extends BaseViewModel {
   }
 
   bool get isFilteringFavorites => _showFavoritesOnly;
+
+  @visibleForTesting
+  set testStocks(List<Stock> stocks) {
+    _allStocks = stocks;
+  }
 }
