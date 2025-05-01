@@ -1,6 +1,8 @@
 import 'package:stacked/stacked.dart';
 import 'package:stockscreener_app/models/stock.dart';
 import 'package:stockscreener_app/services/stock_service.dart';
+import 'package:hive/hive.dart';
+import 'package:flutter/foundation.dart';
 
 class HomeViewModel extends BaseViewModel {
   final _stockService = StockService();
@@ -8,6 +10,7 @@ class HomeViewModel extends BaseViewModel {
   List<Stock> _allStocks = [];
   String _searchQuery = '';
   bool _showFavoritesOnly = false;
+  late Box<List> _favoritesBox;
 
   List<Stock> get stocks {
     var filtered = _allStocks;
@@ -30,33 +33,66 @@ class HomeViewModel extends BaseViewModel {
   }
 
   Future<void> loadStocks() async {
-    setBusy(true);
+    try {
+      setBusy(true);
+      debugPrint('🔄 Loading stocks...');
 
-    // Step 1: Save current favorites
-    final favoriteIds = _allStocks
-        .where((s) => s.isFavorite)
-        .map((s) => s.id)
-        .toSet();
+      // Open Hive box
+      _favoritesBox = Hive.box<List>('favorites');
 
-    // Step 2: Load new stocks
-    _allStocks = await _stockService.loadStocks();
+      // Get saved favorites and ensure they're all Strings
+      final raw = _favoritesBox.get('stock_ids');
+      final savedFavoriteIds = (raw != null && raw is List)
+          ? raw.cast<dynamic>().map((e) => e.toString()).toSet()
+          : <String>{};
 
-    // Step 3: Restore favorites
-    for (var stock in _allStocks) {
-      if (favoriteIds.contains(stock.id)) {
-        stock.isFavorite = true;
+      debugPrint('📦 Favorite IDs (cleaned): $savedFavoriteIds');
+
+      // Optional: clean and re-save for consistency
+      _favoritesBox.put('stock_ids', savedFavoriteIds.toList());
+
+      // Load stocks from service
+      _allStocks = await _stockService.loadStocks();
+      debugPrint('📈 Loaded ${_allStocks.length} stocks from service');
+
+      // Apply favorite status
+      for (var stock in _allStocks) {
+        stock.isFavorite = savedFavoriteIds.contains(stock.id.toString());
       }
-    }
 
-    setBusy(false);
-    notifyListeners();
+      setBusy(false);
+      Future.microtask(() => notifyListeners());
+    } catch (e, stack) {
+      debugPrint("❌ loadStocks() failed: $e");
+      debugPrintStack(stackTrace: stack);
+      setBusy(false);
+      notifyListeners();
+    }
   }
 
   void toggleFavorite(int index) {
     final stock = stocks[index];
     final idx = _allStocks.indexWhere((s) => s.id == stock.id);
     _allStocks[idx].isFavorite = !_allStocks[idx].isFavorite;
+
+    _saveFavoritesToHive();
     notifyListeners();
+  }
+
+  void toggleFavoriteByIndex(int index) {
+    _allStocks[index].isFavorite = !_allStocks[index].isFavorite;
+
+    _saveFavoritesToHive();
+    notifyListeners();
+  }
+
+  void _saveFavoritesToHive() {
+    final favoriteIds = _allStocks
+        .where((s) => s.isFavorite)
+        .map((s) => s.id.toString()) // ✅ store as strings
+        .toList();
+
+    _favoritesBox.put('stock_ids', favoriteIds);
   }
 
   void updateSearchQuery(String query) {

@@ -34,11 +34,15 @@ class StockTile extends StatelessWidget {
         ),
         title: Text(
           stock.name, // Company name
-          style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
+          style: const TextStyle(
+            fontFamily: 'Montserrat',
+            fontWeight: FontWeight.bold,
+            fontSize: 14,
+          ),
         ),
         subtitle: Text(
           stock.symbol, // Company stock symbol
-          style: const TextStyle(fontSize: 12),
+          style: const TextStyle(fontFamily: 'Montserrat', fontSize: 12),
         ),
         trailing: Row(
           mainAxisSize: MainAxisSize.min,

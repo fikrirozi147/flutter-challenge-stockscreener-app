@@ -11,10 +11,19 @@ class HomeView extends StackedView<HomeViewModel> {
   Widget builder(context, viewModel, child) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Stock Screener"),
+        title: const Text(
+          "Stock Screener",
+          style: TextStyle(
+            fontFamily: 'Montserrat',
+            fontSize: 23,
+            fontWeight: FontWeight.w700,
+            fontStyle: FontStyle.italic,
+          ),
+        ),
         actions: [
+          const SizedBox(width: 8),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8),
+            padding: const EdgeInsets.only(right: 16),
             child: InkWell(
               borderRadius: BorderRadius.circular(32),
               onTap: viewModel.toggleFavoriteFilter,
@@ -100,6 +109,8 @@ class HomeView extends StackedView<HomeViewModel> {
 
   @override
   void onViewModelReady(HomeViewModel viewModel) {
-    viewModel.loadStocks();
+    Future.delayed(Duration.zero, () {
+      viewModel.loadStocks();
+    });
   }
 }
